@@ -1,0 +1,54 @@
+Last login: Mon Jun 15 15:55:06 on ttys001
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+Megans-MBP-3:~ meganewing$ /Users/meganewing/ncbi-blast-2.10.1+/bin/blastx -query /Users/meganewing/BlastTutorial/example.fasta -db /Users/meganewing/uniprot_sprot_database_DATE -out 2020-06-15-Megan-uniprot-blastx.tsv -evalue 1E-10 -outfmt 6
+Megans-MBP-3:~ meganewing$ head 2020-06-05-Megan-uniprot-blastx.tsv
+head: 2020-06-05-Megan-uniprot-blastx.tsv: No such file or directory
+Megans-MBP-3:~ meganewing$ head /Users/meganewing/2020-06-15-Megan-uniprot-blastx.tab 
+Megans-MBP-3:~ meganewing$ clear
+
+
+
+
+
+
+
+
+
+
+Megans-MBP-3:~ meganewing$ /Users/meganewing/ncbi-blast-2.10.1+/bin/makeblastdb -in /Users/meganewing/BlastTutorial/example.fasta -dbtype prot -out uniprot_sprot_database2_DATE
+
+
+Building a new DB, current time: 06/15/2020 16:20:48
+New DB name:   /Users/meganewing/uniprot_sprot_database2_DATE
+New DB title:  /Users/meganewing/BlastTutorial/example.fasta
+Sequence type: Protein
+Keep MBits: T
+Maximum file size: 1000000000B
+Adding sequences from FASTA; added 1 sequences in 0.000285864 seconds.
+
+
+Megans-MBP-3:~ meganewing$ ls
+2020-06-15-Megan-uniprot-blastx.tab	uniprot_sprot_database2_DATE.pdb
+2020-06-15-Megan-uniprot-blastx.tsv	uniprot_sprot_database2_DATE.phr
+Applications				uniprot_sprot_database2_DATE.pin
+BlastTutorial				uniprot_sprot_database2_DATE.pot
+Desktop					uniprot_sprot_database2_DATE.psq
+Documents				uniprot_sprot_database2_DATE.ptf
+Downloads				uniprot_sprot_database2_DATE.pto
+Library					uniprot_sprot_database_DATE.pdb
+Movies					uniprot_sprot_database_DATE.phr
+Music					uniprot_sprot_database_DATE.pin
+Pictures				uniprot_sprot_database_DATE.pot
+Projects				uniprot_sprot_database_DATE.psq
+Public					uniprot_sprot_database_DATE.ptf
+SimUText 2019-2020			uniprot_sprot_database_DATE.pto
+ncbi-blast-2.10.1+
+Megans-MBP-3:~ meganewing$ /Users/meganewing/ncbi-blast-2.10.1+/bin/blastx -query /Users/meganewing/uniprot_sprot_database2_DATE -out 2020-03-12-Megan-uniprot-blastx.tab -evalue 1E-10 -outfmt 6
+BLAST query/options error: Either a BLAST database or subject sequence(s) must be specified
+Please refer to the BLAST+ user manual.
+Megans-MBP-3:~ meganewing$ /Users/meganewing/ncbi-blast-2.10.1+/bin/blastx -query /Users/meganewing/BlastTutorial/example.fasta -db /Users/meganewing/uniprot_sprot_database2_DATE -out 2020-03-12-Megan-uniprot-blastx.tab -evalue 1E-10 -outfmt 6
+Megans-MBP-3:~ meganewing$ head /Users/meganewing/2020-03-12-Megan-uniprot-blastx.tab 
+Megans-MBP-3:~ meganewing$ 
